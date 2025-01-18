@@ -6,21 +6,14 @@ layout: home
 
 # Directorio de contenido
 
-A continuación se enumeran hipervínculos a cada uno de los ejercicios de laboratorio y demostraciones.
+Los archivos de muestra se usan en dos simulaciones en el módulo de ejercicio publicado en Microsoft Learn, como se muestra a continuación.
 
-## Laboratorios
+### Archivo de ejemplo
+</br>
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| Módulo | Laboratorio |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## Demostraciones
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
-| Módulo | Demostración |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
+| Módulo | Unidad (simulación) | SampleFile |
+| --- | --- | --- |
+| Exploración de casos de uso de Seguridad de Microsoft Copilot | Habilitar un complemento personalizado | KQL_DefenderExample.yaml |
+| Exploración de casos de uso de Seguridad de Microsoft Copilot | Exploración de las cargas de archivos como una base de conocimiento | Woodgrove Corporate Data Handling Policy.docx |
+| Exploración de casos de uso de Seguridad de Microsoft Copilot | Exploración de las cargas de archivos como una base de conocimiento | Woodgrove Corporate Data Handling Policy.pdf |
 
